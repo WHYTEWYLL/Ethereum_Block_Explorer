@@ -15,6 +15,7 @@ app.use(express.json());
 
 app.get('/block/:network', (req, res) =>  {
 
+  
   const {network} = req.params;
   const provider = new providers.getDefaultProvider(network)
   provider.getBlock('latest').then(elem => {
